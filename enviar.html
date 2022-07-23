@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title></title>
+</head>
+
+<body>
+    <header id="top">
+        <h1 id="title">MARVEL</h1>
+    </header>
+    <main>
+        <div class="forms">
+            <div class="inputs">
+                <div class="endereço">
+
+                    <input type="text" placeholder="Digite um endereço">
+                </div>
+
+                <button>Buscar</button>
+            </div>
+
+        </div>
+        <div id='map'>
+    </main>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAIwTPctnSM2PWcbK6cMdlZaSgEYIKp5U&callback=initMap"
+        async defer></script>
+    </div>
+    <script>
+        function initMap() {
+            var mapOpts = {
+                center: { lat: -7.23718, lng: -39.3222 },
+                zoom: 13,
+
+            };
+
+            var map = new google.maps.Map(document.getElementById('map'), mapOpts);
+
+
+        }
+    </script>
+
+    <style>
+        #map {
+
+            height: 450px;
+            width: 600px;
+
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        .endereço {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            margin: 40px;
+            align-items: center;
+        }
+
+        input {
+            width: 400px;
+            height: 45px;
+            font-size: 19px;
+            outline: none;
+            padding-left: 10px;
+            border-radius: 4px;
+
+        }
+    </style>
+</body>
+
+</html>
